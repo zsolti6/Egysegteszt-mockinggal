@@ -1,0 +1,134 @@
+/* Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/* Logo Styles */
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+nav .navbar-brand {
+    cursor: pointer;
+}
+
+/* Link Container Styles */
+nav .link-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Home Links Styles */
+nav .link-container .home-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+    margin-left: 25px;
+}
+
+/* Authentication Links Wrapper */
+nav .auth-links-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+/* Authentication Links Styles */
+nav .auth-links-wrapper .auth-link, .logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+nav .home-link:hover, nav .auth-link:hover {
+    color: #ccc;
+}
+
+#pp {
+    max-height: 35px;
+    border-radius: 50%;
+}
+
+.noHover:hover {
+    color: #fff;
+}
+
+img{
+    float: right;
+}
+
+img:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    background-color: #444;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    min-width: 200px;
+    padding: 10px 0;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #424d67;
+    color: #fff;
+}
+
+.dropdown-menu .dropdown-item:active {
+    background-color: #666;
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse .d-flex {
+        margin-left: auto;
+        margin-top: 10px;
+    }
+}
+
+.navLogo{
+    height: 35px;
+}
+
+.navLogo:hover{
+    transform: none;
+    border: none;
+}
+
+#settings:hover{
+    color: black !important;
+}

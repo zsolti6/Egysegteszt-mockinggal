@@ -1,0 +1,43 @@
+.settings-window-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.settings-window {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.settings-option {
+  margin-bottom: 20px;
+}
+
+.settings-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset-button, .close-button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-button:hover, .close-button:hover {
+  background: #555;
+}

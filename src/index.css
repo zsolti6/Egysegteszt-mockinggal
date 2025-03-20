@@ -1,0 +1,66 @@
+:root {
+  --bg-color: #303D5C;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.color-bg1 {
+  background-color: var(--bg-color) !important;
+}
+
+.color-bg2 {
+  background-color: color-mix(in srgb, var(--bg-color), white 20%) !important;
+}
+
+.color-bg3 {
+  background-color: color-mix(in srgb, var(--bg-color), white 60%) !important;
+}
+
+.color-text1 {
+  color: white !important;
+}
+
+.color-text2 {
+  color: #290661 !important;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+html, body, #root {
+  height: 100%; /* Ensure the root element takes full height */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Allows the content to grow and push the footer down */
+}
+
+.bg-image{
+  background-image: url("./components/bg.avif");
+  background-size: cover;
+}

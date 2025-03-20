@@ -1,0 +1,334 @@
+/* Page Layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5vh 2vw;
+  box-sizing: border-box; /* Ensure padding is included in height/width calculations */
+}
+
+.content-container {
+  margin-top: 6vh;
+  max-height: 90vh; /* Adjusted to fit taller screens */
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  border: none;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+  overflow-y: auto; /* Add scroll for taller screens */
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: #0c7810;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Radio Group */
+.radio-group {
+  max-height: 50vh; /* Adjusted for taller screens */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add scroll for taller screens */
+}
+
+.radio-option {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.radio-option input {
+  display: none;
+}
+
+.radio-option .name {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.radio-option input:checked + .name {
+  background-color: var(--bg-color); /* Lightened background color */
+  color: white;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.radio-option:hover .name {
+  background-color: rgb(from var(--bg-color) r g b / 0.2);
+}
+
+/* Button Styling */
+.select-button {
+  margin-top: 20px;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--bg-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width for better responsiveness */
+  max-width: 320px; /* Limit width for larger screens */
+}
+
+.select-button:hover {
+  background-color: var(--bg-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.select-button:active {
+  transform: scale(0.98);
+}
+
+/* Spinner Styling */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: none; /* Ensure no border is applied */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Theme Filter Input */
+.theme-filter-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  margin-right: 10px;
+  color: #ccc;
+}
+
+.theme-filter-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.theme-filter-input:focus {
+  border-color: var(--bg-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  max-height: 50vh; /* Adjusted for taller screens */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add scroll for taller screens */
+}
+
+.checkbox-option {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border-radius: 8px;
+  height: 50px;
+}
+
+.checkbox-option input {
+  display: none;
+}
+
+.checkbox-option .name {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.checkbox-option input:checked + .name {
+  background-color: var(--bg-color); /* Lightened background color */
+  color: white;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.checkbox-option:hover .name {
+  background-color: rgb(from var(--bg-color) r g b / 0.2);
+}
+
+/* Selected Themes */
+.selected-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.theme-button {
+  background-color: var(--bg-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px; /* Smaller padding for smaller buttons */
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-button:hover {
+  background-color: var(--bg-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+    padding: 20px;
+    max-height: 85vh; /* Adjusted for smaller screens */
+  }
+
+  .radio-group {
+    max-height: 40vh; /* Adjusted for smaller screens */
+  }
+
+  .select-button {
+    width: 100%;
+    margin-top: 10px; /* Adjusted margin for better placement */
+  }
+}
+
+@media (max-width: 480px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .radio-option .name {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .select-button {
+    padding: 12px 18px;
+    font-size: 16px;
+    margin-top: 10px; /* Adjusted margin for better placement */
+  }
+
+  .content-container {
+    max-height: 90vh; /* Adjusted for very small screens */
+  }
+}
+
+@media (max-height: 600px) {
+  /* Adjustments for shorter screens */
+  .content-container {
+    max-height: 80vh;
+    padding: 15px;
+  }
+
+  .radio-group {
+    max-height: 30vh;
+  }
+
+  .select-button {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Adjustments for wider screens */
+  .content-container {
+    max-width: 600px;
+  }
+
+  .radio-group {
+    max-width: 400px;
+  }
+
+  .select-button {
+    max-width: 400px;
+  }
+}
+
+/* Start Button Container */
+.start-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.select-button {
+  margin-top: 0; /* Reset margin-top for the button */
+}
